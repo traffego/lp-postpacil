@@ -259,6 +259,29 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.15; }
     linear-gradient(to top,    rgba(10,10,15,0.85) 0%,  rgba(10,10,15,0.00) 55%);
 }
 
+.hero-container-flex {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.hero-use-badge {
+  display: block;
+  opacity: 0.35;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  margin-bottom: 8px;
+}
+.hero-use-badge:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+.hero-use-badge img {
+  height: 24px;
+  width: auto;
+  display: block;
+}
+
 .hero-inner {
   position: relative;
   z-index: 1;
@@ -1167,6 +1190,21 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.15; }
   color: var(--text-2);
 }
 .footer-logo svg { color: var(--accent); }
+.footer-use-badge {
+  display: flex;
+  align-items: center;
+  opacity: 0.4;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.footer-use-badge:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+.footer-use-badge img {
+  height: 20px;
+  width: auto;
+  display: block;
+}
 .footer p {
   font-size: 0.78rem;
   color: var(--text-3);
