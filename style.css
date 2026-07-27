@@ -142,7 +142,7 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.15; }
 }
 .brand-sublink {
   font-size: 0.65rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text-3);
   text-decoration: none;
   letter-spacing: 0.03em;
@@ -150,10 +150,39 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.15; }
   transition: opacity 0.15s, color 0.15s;
   padding-left: 25px;
   line-height: 1;
+  display: inline-block;
+  animation: brand-glow 2.2s ease-in-out 0.4s 2;
 }
 .brand-sublink:hover {
   opacity: 1;
-  color: var(--accent);
+  color: #a78bfa;
+  text-shadow: 0 0 8px rgba(167, 139, 250, 0.6);
+}
+
+@keyframes brand-glow {
+  0% {
+    color: var(--text-3);
+    text-shadow: none;
+    opacity: 0.65;
+    transform: scale(1);
+  }
+  35% {
+    color: #ffffff;
+    text-shadow: 0 0 10px #a78bfa, 0 0 20px #7c3aed, 0 0 30px #6d28d9;
+    opacity: 1;
+    transform: scale(1.06);
+  }
+  70% {
+    color: #c4b5fd;
+    text-shadow: 0 0 8px #a78bfa;
+    opacity: 0.9;
+  }
+  100% {
+    color: var(--text-3);
+    text-shadow: none;
+    opacity: 0.65;
+    transform: scale(1);
+  }
 }
 
 .nav-logo {
