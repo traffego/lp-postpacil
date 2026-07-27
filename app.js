@@ -64,8 +64,54 @@
   });
 
   /* ── Seleção de plano ────────────────────────────────────────── */
-  const planInput = document.getElementById('selected-plan-id');
-  const planCards = document.querySelectorAll('.plan-card');
+  const planInput   = document.getElementById('selected-plan-id');
+  const planCards   = document.querySelectorAll('.plan-card');
+  const planTitle   = document.getElementById('cta-plan-title');
+  const planList    = document.getElementById('cta-plan-includes');
+
+  const PLAN_DETAILS = {
+    '1': {
+      title: 'Plano Mensal Starter.<br>30 dias de acesso.',
+      includes: [
+        '✓ Acesso a todos os provedores de texto e imagem',
+        '✓ Uso em 1 site WordPress',
+        '✓ Atualizações incluídas no período',
+        '✓ Garantia incondicional de 7 dias'
+      ]
+    },
+    '2': {
+      title: 'Plano Trimestral Pro.<br>90 dias de acesso.',
+      includes: [
+        '✓ Economia de 13% em relação ao plano mensal',
+        '✓ Acesso a todos os provedores de texto e imagem',
+        '✓ Uso em 1 site WordPress',
+        '✓ Atualizações incluídas no período',
+        '✓ Garantia incondicional de 7 dias'
+      ]
+    },
+    '3': {
+      title: 'Plano Anual Agência.<br>365 dias de acesso.',
+      includes: [
+        '✓ Maior economia (~R$ 33,25 por mês)',
+        '✓ Acesso a todos os provedores de texto e imagem',
+        '✓ Uso em 1 site WordPress',
+        '✓ Atualizações incluídas no período',
+        '✓ Garantia incondicional de 7 dias'
+      ]
+    }
+  };
+
+  function updatePlanDisplay(planId) {
+    const data = PLAN_DETAILS[planId];
+    if (!data) return;
+
+    if (planTitle) {
+      planTitle.innerHTML = data.title;
+    }
+    if (planList) {
+      planList.innerHTML = data.includes.map(item => `<li>${item}</li>`).join('');
+    }
+  }
 
   planCards.forEach((card) => {
     card.addEventListener('click', () => {
@@ -79,8 +125,13 @@
       card.classList.add('plan-card--selected');
       card.setAttribute('aria-pressed', 'true');
 
+      const planId = card.dataset.planId;
+
       // Atualizar o hidden input
-      if (planInput) planInput.value = card.dataset.planId;
+      if (planInput) planInput.value = planId;
+
+      // Atualizar texto e vantagens à esquerda
+      updatePlanDisplay(planId);
     });
   });
 
