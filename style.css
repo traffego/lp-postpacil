@@ -134,6 +134,28 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.15; }
   align-items: center;
   justify-content: space-between;
 }
+.brand-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+}
+.brand-sublink {
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--text-3);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  opacity: 0.65;
+  transition: opacity 0.15s, color 0.15s;
+  padding-left: 25px;
+  line-height: 1;
+}
+.brand-sublink:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
 .nav-logo {
   display: flex;
   align-items: center;
