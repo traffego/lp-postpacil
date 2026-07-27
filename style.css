@@ -277,7 +277,7 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.15; }
   transform: translateY(-2px);
 }
 .hero-use-badge img {
-  height: 24px;
+  height: 28px;
   width: auto;
   display: block;
 }
@@ -1201,7 +1201,7 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.15; }
   transform: translateY(-1px);
 }
 .footer-use-badge img {
-  height: 20px;
+  height: 22px;
   width: auto;
   display: block;
 }
