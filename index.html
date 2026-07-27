@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post Fácil I.A. — Geração de posts com IA direto no WordPress</title>
+  <meta name="description" content="Plugin WordPress que gera artigos completos com SEO e imagens usando GPT-4o, Gemini, Claude ou DeepSeek — direto do painel, sem copiar e colar." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#inicio" class="nav-logo" id="nav-logo-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C12 6.627 6.627 12 0 12C6.627 12 12 17.373 12 24C12 17.373 17.373 12 24 12C17.373 12 12 6.627 12 0Z"/></svg>
+        Post Fácil <span>I.A.</span>
+      </a>
+      <div class="nav-links">
+        <a href="#como-funciona" class="nav-link">Como funciona</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="https://olive-locust-173119.hostingersite.com/license-server-wp-post/checkout.php" class="btn-outline-sm" id="nav-cta-btn" target="_blank" rel="noopener">Comprar →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO — 2 colunas, texto à esquerda -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-bg-slide hero-bg-slide--1 active"></div>
+      <div class="hero-bg-slide hero-bg-slide--2"></div>
+    </div>
+    <div class="container">
+      <div class="hero-inner">
+        <h1 class="hero-headline">
+          Matéria pronta em 2 minutos com I.A.
+        </h1>
+        <p class="hero-label">Plugin para WordPress · PHP 8.1+</p>
+        <p class="hero-body">
+          Jornalistas e criadores de conteúdo geraram artigo completo,
+          com imagem, em menos de 2 minutos—direto no painel do WordPress.
+        </p>
+        <div class="hero-actions">
+          <a href="#cta-final" class="btn-primary" id="hero-cta-btn">Comprar Plugin</a>
+          <a href="#como-funciona" class="hero-link">Como funciona ↓</a>
+        </div>
+        <p class="hero-note">GPT-4o · Gemini 2.5 · Claude · DeepSeek · Cloudflare AI</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE — fundo branco, scroll infinito -->
+  <div class="marquee-strip" aria-label="Funciona com">
+    <div class="marquee-track">
+      <!-- set 1 -->
+      <span class="marquee-label">Funciona com</span>
+      <span class="marquee-sep" aria-hidden="true">·</span>
+      <span class="marquee-item">OpenAI GPT-4o</span>
+      <span class="marquee-sep" aria-hidden="true">·</span>
+      <span class="marquee-item">Google Gemini 2.5</span>
+      <span class="marquee-sep" aria-hidden="true">·</span>
+      <span class="marquee-item">Anthropic Claude</span>
+      <span class="marquee-sep" aria-hidden="true">·</span>
+      <span class="marquee-item">DeepSeek</span>
+      <span class="marquee-sep" aria-hidden="true">·</span>
+      <span class="marquee-item">Cloudflare AI</span>
+      <span class="marquee-sep" aria-hidden="true">·</span>
+      <span class="marquee-item">DALL·E 3</span>
+      <span class="marquee-sep" aria-hidden="true">·</span>
+      <span class="marquee-item">FLUX.1</span>
+      <span class="marquee-sep" aria-hidden="true">·</span>
+      <span class="marquee-item">Pollinations</span>
+      <span class="marquee-sep" aria-hidden="true">·</span>
+      <!-- set 2 (duplicado para loop contínuo) -->
+      <span class="marquee-label" aria-hidden="true">Funciona com</span>
+      <span class="marquee-sep" aria-hidden="true">·</span>
+      <span class="marquee-item" aria-hidden="true">OpenAI GPT-4o</span>
+      <span class="marquee-sep" aria-hidden="true">·</span>
+      <span class="marquee-item" aria-hidden="true">Google Gemini 2.5</span>
+      <span class="marquee-sep" aria-hidden="true">·</span>
+      <span class="marquee-item" aria-hidden="true">Anthropic Claude</span>
+      <span class="marquee-sep" aria-hidden="true">·</span>
+      <span class="marquee-item" aria-hidden="true">DeepSeek</span>
+      <span class="marquee-sep" aria-hidden="true">·</span>
+      <span class="marquee-item" aria-hidden="true">Cloudflare AI</span>
+      <span class="marquee-sep" aria-hidden="true">·</span>
+      <span class="marquee-item" aria-hidden="true">DALL·E 3</span>
+      <span class="marquee-sep" aria-hidden="true">·</span>
+      <span class="marquee-item" aria-hidden="true">FLUX.1</span>
+      <span class="marquee-sep" aria-hidden="true">·</span>
+      <span class="marquee-item" aria-hidden="true">Pollinations</span>
+      <span class="marquee-sep" aria-hidden="true">·</span>
+    </div>
+  </div>
+
+  <!-- COMPARATIVO -->
+  <section class="compare-section" id="problema">
+    <div class="container">
+
+      <div class="compare-header">
+        <span class="section-tag">O problema</span>
+        <h2>Você sabe que precisa postar.<br>O tempo não aparece.</h2>
+      </div>
+
+      <div class="compare-grid">
+
+        <!-- Card SEM -->
+        <div class="compare-card compare-card--bad" id="card-without">
+          <div class="compare-card-label">
+            <span class="compare-dot compare-dot--bad"></span>
+            Sem o plugin
+          </div>
+          <ul class="compare-list">
+            <li class="compare-item">
+              <span class="compare-item-icon" aria-hidden="true">✕</span>
+              <span>Escreve manualmente ou abre o ChatGPT numa aba separada</span>
+            </li>
+            <li class="compare-item">
+              <span class="compare-item-icon" aria-hidden="true">✕</span>
+              <span>Busca imagem em outro site, faz upload separado</span>
+            </li>
+            <li class="compare-item">
+              <span class="compare-item-icon" aria-hidden="true">✕</span>
+              <span>Ajusta SEO à mão em cada campo</span>
+            </li>
+            <li class="compare-item">
+              <span class="compare-item-icon" aria-hidden="true">✕</span>
+              <span>Um post "rápido" consome 2 horas</span>
+            </li>
+            <li class="compare-item">
+              <span class="compare-item-icon" aria-hidden="true">✕</span>
+              <span>Blog para. Google esquece o domínio.</span>
+            </li>
+          </ul>
+          <div class="compare-card-footer">
+            <span class="compare-time compare-time--bad">~2h por artigo</span>
+          </div>
+        </div>
+
+        <!-- Card COM -->
+        <div class="compare-card compare-card--good" id="card-with">
+          <div class="compare-card-label">
+            <span class="compare-dot compare-dot--good"></span>
+            Com o plugin
+          </div>
+          <ul class="compare-list">
+            <li class="compare-item">
+              <span class="compare-item-icon compare-item-icon--good" aria-hidden="true">✓</span>
+              <span>Digita o tema direto no painel do WordPress</span>
+            </li>
+            <li class="compare-item">
+              <span class="compare-item-icon compare-item-icon--good" aria-hidden="true">✓</span>
+              <span>Artigo + imagem gerados automaticamente pelo modelo escolhido</span>
+            </li>
+            <li class="compare-item">
+              <span class="compare-item-icon compare-item-icon--good" aria-hidden="true">✓</span>
+              <span>Inseridos direto no editor, prontos para revisar</span>
+            </li>
+            <li class="compare-item">
+              <span class="compare-item-icon compare-item-icon--good" aria-hidden="true">✓</span>
+              <span>Sem trocar de aba, sem copiar e colar</span>
+            </li>
+            <li class="compare-item">
+              <span class="compare-item-icon compare-item-icon--good" aria-hidden="true">✓</span>
+              <span>Volume consistente. Blog ativo. Tráfego crescendo.</span>
+            </li>
+          </ul>
+          <div class="compare-card-footer">
+            <span class="compare-time compare-time--good">~2 min por artigo</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- COMO FUNCIONA -->
+  <section class="how-section" id="como-funciona">
+    <div class="container">
+
+      <!-- Header acima do grid -->
+      <div class="how-header">
+        <span class="section-tag">Como funciona</span>
+        <h2>Do tema ao post em 3 ações<br>dentro do seu WP-Admin</h2>
+      </div>
+
+      <div class="how-layout">
+
+        <!-- Editor mockup à esquerda -->
+        <div class="how-left" aria-hidden="true">
+          <div class="editor-mockup">
+            <div class="ed-topbar">
+              <span class="mb-dot"></span><span class="mb-dot"></span><span class="mb-dot"></span>
+              <span class="mb-title">WordPress — Editar Post</span>
+            </div>
+            <div class="ed-body">
+              <!-- Imagem destaque -->
+              <div class="ed-featured" id="ed-featured" style="display:none">
+                <div class="ed-featured-inner" id="ed-featured-inner"></div>
+              </div>
+              <!-- Título do post -->
+              <div class="ed-title-wrap">
+                <span class="ed-title-placeholder" id="ed-title-ph">Adicionar título</span>
+                <span class="ed-title" id="ed-title"></span>
+              </div>
+              <!-- Conteúdo gerado -->
+              <div class="ed-content" id="ed-content">
+                <div class="ed-block" id="ed-block-intro" style="display:none">
+                  <div class="ed-h2" id="ed-h2-intro"></div>
+                  <div class="ed-p"  id="ed-p-intro"></div>
+                </div>
+                <div class="ed-block" id="ed-block-sec1" style="display:none">
+                  <div class="ed-h2" id="ed-h2-sec1"></div>
+                  <div class="ed-p"  id="ed-p-sec1"></div>
+                </div>
+                <div class="ed-block" id="ed-block-sec2" style="display:none">
+                  <div class="ed-h2" id="ed-h2-sec2"></div>
+                  <div class="ed-p"  id="ed-p-sec2"></div>
+                </div>
+              </div>
+              <!-- Status -->
+              <div class="ed-status" id="ed-status"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metabox animado à direita -->
+        <div class="how-right" aria-hidden="true">
+          <div class="metabox-mockup">
+            <div class="mb-topbar">
+              <span class="mb-dot"></span><span class="mb-dot"></span><span class="mb-dot"></span>
+              <span class="mb-title">⚡ Post Fácil I.A. — Metabox</span>
+            </div>
+            <div class="mb-body">
+              <div class="mb-box-title">⚡ POST FÁCIL I.A.</div>
+              <div class="mb-field">
+                <label class="mb-label">Tema / Assunto</label>
+                <div class="mb-input-wrap">
+                  <span class="mb-input-text" id="mb-topic"></span><span class="mb-cursor">|</span>
+                </div>
+              </div>
+              <div class="mb-field">
+                <label class="mb-label">Provedor de Texto</label>
+                <div class="mb-select">
+                  <span id="mb-provider">GPT-4o</span>
+                  <span class="mb-chevron">▾</span>
+                </div>
+              </div>
+              <div class="mb-field">
+                <label class="mb-label">Parágrafos</label>
+                <div class="mb-select"><span>5</span><span class="mb-chevron">▾</span></div>
+              </div>
+              <button class="mb-btn" id="mb-btn-text">Gerar Texto</button>
+              <div class="mb-output" id="mb-output">
+                <div class="mb-output-lines" id="mb-lines"></div>
+              </div>
+              <button class="mb-btn mb-btn--img" id="mb-btn-img" style="display:none">Gerar Capa</button>
+              <div class="mb-img-preview" id="mb-img-preview" style="display:none">
+                <div class="mb-img-inner" id="mb-img-inner"></div>
+                <span class="mb-img-label">✓ Imagem salva na Biblioteca</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FUNCIONALIDADES — grid assimétrico, não todos com ícone -->
+  <section class="features-section" id="funcionalidades">
+    <div class="container">
+
+      <div class="features-header">
+        <span class="section-tag">O que está incluído</span>
+        <h2>Tudo acontece dentro<br>do WordPress.</h2>
+      </div>
+
+      <div class="features-grid">
+
+        <!-- Card grande: destaque principal -->
+        <div class="feat-card feat-card--large">
+          <span class="feat-tag">Texto</span>
+          <h3>5 modelos de linguagem, você escolhe</h3>
+          <p>OpenAI, Gemini, Claude, DeepSeek ou Cloudflare Workers AI. Troque o modelo a qualquer hora nas configurações. Suas chaves ficam criptografadas com AES-256 no banco de dados.</p>
+          <div class="feat-models">
+            <code>gpt-4o</code>
+            <code>gemini-2.5-flash</code>
+            <code>claude-sonnet</code>
+            <code>deepseek-chat</code>
+            <code>llama-3.3-70b</code>
+          </div>
+        </div>
+
+        <!-- Card médio -->
+        <div class="feat-card feat-card--medium">
+          <span class="feat-tag">Imagem</span>
+          <h3>7 provedores de imagem, 7 estilos</h3>
+          <p>Fotojornalístico, Cinematográfico, Arte Digital, Vetor, Anime, Vintage e 3D. O prompt de imagem é otimizado automaticamente pelo modelo de texto ativo.</p>
+        </div>
+
+        <!-- Card estreito: detalhe técnico, sem ícone -->
+        <div class="feat-card feat-card--narrow">
+          <h3>Referências por URL</h3>
+          <p>Cole links de artigos existentes. O plugin extrai o texto e envia como contexto para a IA gerar um conteúdo mais embasado.</p>
+        </div>
+
+        <!-- Card estreito: segurança -->
+        <div class="feat-card feat-card--narrow">
+          <h3>AES-256 nas chaves</h3>
+          <p>Todas as API keys são criptografadas antes de salvar. As chaves nunca trafegam em texto puro.</p>
+        </div>
+
+        <!-- Card texto puro: sem imagem, sem ícone, sem borda colorida -->
+        <div class="feat-card feat-card--text-only">
+          <h3>Drag & Drop de imagens</h3>
+          <p>Arraste uma imagem para qualquer lugar da janela. Um modal pergunta se quer usar como capa ou inserir no corpo do texto.</p>
+        </div>
+
+        <!-- Card texto puro -->
+        <div class="feat-card feat-card--text-only">
+          <h3>Prompt global configurável</h3>
+          <p>Defina o tom de voz, estilo jornalístico e instruções fixas que valem para todas as gerações do site.</p>
+        </div>
+
+        <!-- Card texto puro -->
+        <div class="feat-card feat-card--text-only">
+          <h3>Gemini Search ativo</h3>
+          <p>Ative a pesquisa em tempo real do Gemini para que o artigo gerado considere fatos e datas recentes.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEGURANÇA / TÉCNICO — faixa sem card -->
+  <div class="tech-strip">
+    <div class="container tech-strip-inner">
+      <div class="tech-item">
+        <strong>WordPress 6.0 – 6.8</strong>
+        <span>Testado e compatível</span>
+      </div>
+      <div class="tech-divider" aria-hidden="true"></div>
+      <div class="tech-item">
+        <strong>PHP 8.1+</strong>
+        <span>Requisito mínimo</span>
+      </div>
+      <div class="tech-divider" aria-hidden="true"></div>
+      <div class="tech-item">
+        <strong>Editor Clássico + Gutenberg</strong>
+        <span>Os dois funcionam</span>
+      </div>
+      <div class="tech-divider" aria-hidden="true"></div>
+      <div class="tech-item">
+        <strong>Custo por geração</strong>
+        <span>~R$ 0,05 com GPT-4o</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ — apenas as objeções reais -->
+  <section class="faq-section" id="faq">
+    <div class="container faq-inner">
+
+      <div class="faq-left">
+        <span class="section-tag">Dúvidas</span>
+        <h2>O que trava<br>a decisão</h2>
+        <p>Outras dúvidas? Escreva para <a href="mailto:contato@postfacilia.com.br">contato@postfacilia.com.br</a></p>
+      </div>
+
+      <div class="faq-list">
+
+        <div class="faq-item" id="faq-1">
+          <button class="faq-question" aria-expanded="false" aria-controls="fa1">
+            Preciso ter API própria da OpenAI ou Google?
+            <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="fa1" hidden>
+            <p>Sim. Você usa sua própria chave de API — paga direto ao provedor, sem markup. Gerar um artigo completo com GPT-4o custa em média R$ 0,05. O plugin não cobra nada por geração.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-2">
+          <button class="faq-question" aria-expanded="false" aria-controls="fa2">
+            O Google vai penalizar conteúdo gerado por IA?
+            <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="fa2" hidden>
+            <p>O Google avalia qualidade, não origem. Conteúdo gerado por IA que é útil, original e bem estruturado ranqueia normalmente. O plugin gera artigos com H2/H3, coerência de datas e estrutura semântica — você ainda revisa antes de publicar.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-3">
+          <button class="faq-question" aria-expanded="false" aria-controls="fa3">
+            Funciona com qualquer tema WordPress?
+            <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="fa3" hidden>
+            <p>Sim. O plugin opera no painel de edição do WordPress (wp-admin) e não interfere na aparência do tema. Funciona com Editor Clássico (TinyMCE) e Gutenberg.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-4">
+          <button class="faq-question" aria-expanded="false" aria-controls="fa4">
+            Tem garantia?
+            <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="fa4" hidden>
+            <p>7 dias. Se o plugin não funcionar no seu WordPress por qualquer razão técnica, devolvemos 100% — sem perguntas. Envie um e-mail com a nota fiscal.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA FINAL — sem countdown fake, sem bônus inventados -->
+  <section class="cta-section" id="cta-final">
+    <div class="container cta-inner">
+
+      <div class="cta-text">
+        <h2>Licença vitalícia.<br>1 site. Sem mensalidade.</h2>
+        <ul class="cta-includes">
+          <li>✓ Acesso a todos os provedores de texto e imagem</li>
+          <li>✓ Atualizações incluídas</li>
+          <li>✓ Suporte por e-mail por 30 dias</li>
+          <li>✓ Garantia de 7 dias</li>
+        </ul>
+      </div>
+
+
+      <div class="cta-box">
+
+        <!-- Planos -->
+        <p class="plan-label">Selecione o plano</p>
+
+        <div class="plan-cards" role="group" aria-label="Planos disponíveis">
+
+          <button type="button" class="plan-card plan-card--selected" id="plan-1"
+            data-plan-id="1" data-price="49,90" data-label="R$ 49,90"
+            aria-pressed="true">
+            <span class="plan-duration">30 dias</span>
+            <span class="plan-name">Mensal<br><strong>Starter</strong></span>
+            <span class="plan-price">R$&nbsp;<strong>49,90</strong></span>
+          </button>
+
+          <button type="button" class="plan-card" id="plan-2"
+            data-plan-id="2" data-price="129,90" data-label="R$ 129,90"
+            aria-pressed="false">
+            <span class="plan-duration">90 dias</span>
+            <span class="plan-name">Trimestral<br><strong>Pro</strong></span>
+            <span class="plan-price">R$&nbsp;<strong>129,90</strong></span>
+          </button>
+
+          <button type="button" class="plan-card" id="plan-3"
+            data-plan-id="3" data-price="399,00" data-label="R$ 399,00"
+            aria-pressed="false">
+            <span class="plan-duration">365 dias</span>
+            <span class="plan-name">Anual<br><strong>Agência</strong></span>
+            <span class="plan-price">R$&nbsp;<strong>399,00</strong></span>
+          </button>
+
+        </div>
+
+        <input type="hidden" id="selected-plan-id" value="1" />
+
+        <form class="cta-form" id="cta-form" novalidate>
+
+          <div class="cta-field">
+            <label for="f-name">Nome completo</label>
+            <input type="text" id="f-name" name="name" placeholder="Seu nome" autocomplete="name" required />
+          </div>
+
+          <div class="cta-field">
+            <label for="f-email">E-mail</label>
+            <input type="email" id="f-email" name="email" placeholder="seu@email.com" autocomplete="email" required />
+          </div>
+
+
+          <div class="cta-field-row">
+            <div class="cta-field">
+              <label for="f-cpf">CPF ou CNPJ</label>
+              <input type="text" id="f-cpf" name="cpfCnpj" placeholder="000.000.000-00" autocomplete="off" required />
+            </div>
+            <div class="cta-field">
+              <label for="f-phone">Telefone / WhatsApp</label>
+              <input type="tel" id="f-phone" name="phone" placeholder="(00) 90000-0000" autocomplete="tel" />
+            </div>
+          </div>
+
+          <div id="cta-form-error" class="cta-form-error" hidden></div>
+
+          <button type="submit" class="btn-primary btn-primary--large" id="cta-submit-btn">
+            Ir para o checkout
+          </button>
+
+        </form>
+        <p class="cta-guarantee">Garantia de 7 dias · PIX ou Cartão · Pagamento seguro via Asaas</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C12 6.627 6.627 12 0 12C6.627 12 12 17.373 12 24C12 17.373 17.373 12 24 12C17.373 12 12 6.627 12 0Z"/></svg>
+        Post Fácil I.A.
+      </span>
+      <p>© 2026 · Plugin WordPress · Todos os direitos reservados</p>
+      <nav class="footer-nav" aria-label="Links do rodapé">
+        <a href="#faq">FAQ</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="mailto:contato@postfacilia.com.br">Contato</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
